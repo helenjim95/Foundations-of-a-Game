@@ -78,6 +78,7 @@ public class GameBoard {
         for (int i = 0; i < this.sizeX - 1; i++) {
             for (int j = 0; j < this.sizeY - 1; j++) {
                 System.out.print(this.boardMatrix[j][i]);
+                System.out.print("");
             }
             System.out.println();
         }
