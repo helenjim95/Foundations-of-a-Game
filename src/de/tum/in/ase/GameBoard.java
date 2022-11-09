@@ -28,6 +28,7 @@ public class GameBoard {
 //        System.out.println("initializing gameboard");
 //        printGameBoard();
 //        System.out.printf("creating gameBoard with %d, %d size%n", this.sizeX, this.sizeY);
+//        set position of H and G
         this.set(0, 0, 'H');
         this.set(sizeX - 1, sizeY - 1, 'G');
     }
@@ -74,8 +75,8 @@ public class GameBoard {
     public void printGameBoard() {
 //        System.out.println("printing game board");
 //        System.out.printf("gameboard size: x: %d, y: %d%n", this.sizeX, this.sizeY);
-        for (int i = 0; i < this.sizeX; i++) {
-            for (int j = 0; j < this.sizeY; j++) {
+        for (int i = 0; i < this.sizeX - 1; i++) {
+            for (int j = 0; j < this.sizeY - 1; j++) {
                 System.out.print(this.boardMatrix[j][i]);
             }
             System.out.println();
