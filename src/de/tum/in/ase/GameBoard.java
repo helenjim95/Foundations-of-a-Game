@@ -18,12 +18,13 @@ public class GameBoard {
         } else {
         this.sizeY = sizeY;
         }
-        this.boardMatrix = new char['_']['_'];
+        char empty_field = '_';
+        this.boardMatrix = new char[empty_field][empty_field];
 //        System.out.printf("creating gameBoard with %d, %d size%n", this.sizeX, this.sizeY);
     }
 
     public int getSizeX() {
-        return sizeX;
+        return this.sizeX;
     }
 
     public void setSizeX(int sizeX) {
@@ -31,7 +32,7 @@ public class GameBoard {
     }
 
     public int getSizeY() {
-        return sizeY;
+        return this.sizeY;
     }
 
     public void setSizeY(int sizeY) {
@@ -39,7 +40,7 @@ public class GameBoard {
     }
 
     public char[][] getBoardMatrix() {
-        return boardMatrix;
+        return this.boardMatrix;
     }
 
     public void setBoardMatrix(char[][] boardMatrix) {
@@ -47,10 +48,10 @@ public class GameBoard {
     }
 
     public char get(int x, int y) {
-        if (x > sizeX || y > sizeY) {
+        if (x > this.sizeX - 1 || y > this.sizeY - 1) {
             return '\0';
         } else {
-        return boardMatrix[x][y];
+        return this.boardMatrix[x][y];
         }
     }
 
@@ -66,7 +67,7 @@ public class GameBoard {
 //        System.out.printf("gameboard size: x: %d, y: %d%n", this.sizeX, this.sizeY);
         for (int i = 0; i < this.sizeX; i++) {
             for (int j = 0; j < this.sizeY; j++) {
-                System.out.print(boardMatrix[j][i]);
+                System.out.print(this.boardMatrix[j][i]);
             }
             System.out.println();
         }
