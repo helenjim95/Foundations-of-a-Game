@@ -10,8 +10,6 @@ public class Game {
     public Game(int x, int y) {
         this.gameBoard = new GameBoard(x, y);
         this.hero = new Hero();
-        this.gameBoard.set(0, 0, 'H');
-        this.gameBoard.set(x - 1, y - 1, 'G');
     }
 
     //TODO: implement the move methods
