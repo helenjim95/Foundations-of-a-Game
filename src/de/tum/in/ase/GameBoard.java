@@ -20,9 +20,10 @@ public class GameBoard {
         }
 //        initialize gameBoard
         this.boardMatrix = new char[sizeX][sizeY];
-        for (int i = 0; i < sizeX; i++) {
-            for(int j = 0; j < sizeY; j++) {
-                set(i, j, '_');
+        for(int row = 0; row < sizeY; row++)
+            for (int column = 0; column < sizeX; column++) {
+            {
+                set(column, row, '_');
             }
         }
 //        System.out.println("initializing gameboard");
@@ -75,9 +76,9 @@ public class GameBoard {
     public void printGameBoard() {
 //        System.out.println("printing game board");
 //        System.out.printf("gameboard size: x: %d, y: %d%n", this.sizeX, this.sizeY);
-        for (int i = 0; i < this.sizeX - 1; i++) {
-            for (int j = 0; j < this.sizeY - 1; j++) {
-                System.out.print(this.boardMatrix[j][i]);
+        for (int row = 0; row < this.sizeY; row++) {
+            for (int column = 0; column < this.sizeX; column++) {
+                System.out.print(this.boardMatrix[column][row]);
                 System.out.print(" ");
             }
             System.out.println();
