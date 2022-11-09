@@ -12,6 +12,22 @@ public class Game {
         this.hero = new Hero();
     }
 
+    public GameBoard getGameBoard() {
+        return gameBoard;
+    }
+
+    public void setGameBoard(GameBoard gameBoard) {
+        this.gameBoard = gameBoard;
+    }
+
+    public Hero getHero() {
+        return hero;
+    }
+
+    public void setHero(Hero hero) {
+        this.hero = hero;
+    }
+
     //TODO: implement the move methods
     public void moveLeft() {
 //        check whether the next move will be out of bound
